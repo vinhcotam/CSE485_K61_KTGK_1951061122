@@ -1,3 +1,9 @@
+<?php
+    include 'conf.php';
+    if(isset($_GET['id'])){
+        $id=$_GET['id'];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +36,8 @@
                     <th scope="col">Nhóm máu</th>
                     <th scope="col">Ngày lập sổ</th>
                     <th scope="col">Ngày cập nhật</th>
+                    <th scope="col">Sửa</th>
+                    <th scope="col">Xóa</th>
                 </tr>
             </thead>
 
@@ -40,7 +48,7 @@
                     //b1:
                     include 'conf.php';
                     //b2
-                    $sql="select * from tb_patient";
+                    $sql="select * from tb_patient WHERE patientid=$id";
                     $result=mysqli_query($conn,$sql);
                     if(mysqli_num_rows($result)>0){
                         while($row=mysqli_fetch_assoc($result)){
@@ -57,6 +65,8 @@
                             echo '<td>'.$row['blood_type'].'</td>';
                             echo '<td>'.$row['created_on'].'</td>';
                             echo '<td>'.$row['modified_on'].'</td>';
+                            echo '<td><a href="suachitiet.php?id='.$row['patientid'].'" class="btn btn-primary"><i class="fas fa-user-edit"></i>Edit</a></td>';
+                            echo '<td><a href="xoachitiet.php?id='.$row['patientid'].'" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td>';
                             echo '</tr>';   
                         }
                     }

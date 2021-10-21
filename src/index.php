@@ -47,7 +47,7 @@
                             echo '<td>'.$row['lastname'].'</td>';
                             echo '<td>'.$row['mobile'].'</td>';
                             echo '<td>'.$row['email'].'</td>';
-                            echo '<td><a href="chitiet.php?id='.$row['patientid'].'" class="btn btn-primary"><i class="fas fa-user-edit"></i>Chi tiết</a></td>';
+                            echo '<td><a href="chitiet.php?id='.$row['patientid'].'" class="btn btn-primary"><i class="fas fa-eye"></i></i>Chi tiết</a></td>';
                             echo '<td><a href="sua.php?id='.$row['patientid'].'" class="btn btn-primary"><i class="fas fa-user-edit"></i>Edit</a></td>';
                             echo '<td><a href="xoa.php?id='.$row['patientid'].'" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td>';
                             echo '</tr>';   
