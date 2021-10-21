@@ -22,6 +22,12 @@
     <main>
         <h2>Thêm</h2>
         <form action="process_add.php" method="post">
+        <div class="form-group row">
+                <label for="firstname" class="col-sm-2 col-form-label">Họ</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="firstname" name="firstname">
+                </div>
+            </div>
             <div class="form-group row">
                 <label for="lastname" class="col-sm-2 col-form-label">Tên</label>
                 <div class="col-sm-10">

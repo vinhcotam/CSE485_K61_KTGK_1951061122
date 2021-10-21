@@ -20,6 +20,7 @@
             <thead>
                 <tr>
                     <th scope="col">Mã bệnh nhân</th>
+                    <th scope="col">Họ bệnh nhân</th>
                     <th scope="col">Tên bệnh nhân</th>
                     <th scope="col">Sô điện thoại</th>
                     <th scope="col">Email</th>
@@ -36,12 +37,13 @@
                     //b1:
                     include 'conf.php';
                     //b2
-                    $sql="select patientid, lastname, mobile, email from tb_patient";
+                    $sql="select patientid,firstname, lastname, mobile, email from tb_patient";
                     $result=mysqli_query($conn,$sql);
                     if(mysqli_num_rows($result)>0){
                         while($row=mysqli_fetch_assoc($result)){
                             echo '<tr>';
                             echo '<th scope="row">'.$row['patientid'].'</th>';
+                            echo '<td>'.$row['firstname'].'</td>';
                             echo '<td>'.$row['lastname'].'</td>';
                             echo '<td>'.$row['mobile'].'</td>';
                             echo '<td>'.$row['email'].'</td>';
