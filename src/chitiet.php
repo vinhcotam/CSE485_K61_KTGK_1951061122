@@ -66,7 +66,7 @@
                             echo '<td>'.$row['created_on'].'</td>';
                             echo '<td>'.$row['modified_on'].'</td>';
                             echo '<td><a href="suachitiet.php?id='.$row['patientid'].'" class="btn btn-primary"><i class="fas fa-user-edit"></i>Edit</a></td>';
-                            echo '<td><a href="xoachitiet.php?id='.$row['patientid'].'" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td>';
+                            echo '<td><a href="xoa.php?id='.$row['patientid'].'" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td>';
                             echo '</tr>';   
                         }
                     }
