@@ -21,7 +21,7 @@
 
 <body>
     <main>
-        <h2>Sửa</h2>
+        <h2>Sửa chi tiết</h2>
         <?php
         $sql="SELECT * FROM tb_patient WHERE patientid=$id";
         $res=mysqli_query($conn, $sql);
@@ -66,7 +66,7 @@
             $created_on =$_POST['created_on'];
             $modified_on =$_POST['modified_on'];
             $sql = "UPDATE tb_patient SET firstname='$firstname',lastname='$lastname',dateofbirth='$dateofbirth',gender='$gender',
-            mobile='$mobile',email='$email',height='$height',weight='$weight',created_on='$created_on',modified_on='$modified_on' WHERE patientid = $id";
+            mobile='$mobile',email='$email',height='$height',weight='$weight',blood_type='$blood_type',created_on='$created_on',modified_on='$modified_on' WHERE patientid = $id";
             $result = mysqli_query($conn,$sql);
             header("location:index.php");
         }
@@ -109,7 +109,7 @@
             <input type="text" class="form-control" name="weight" value="<?php echo $row['weight'];; ?>">
         </div>
         <div class="mb-3">
-            <label for="blood_type" class="form-label">Cân nặng</label>
+            <label for="blood_type" class="form-label">Nhóm máu</label>
             <input type="text" class="form-control" name="blood_type" value="<?php echo $row['blood_type'];; ?>">
         </div>
         <div class="mb-3">
